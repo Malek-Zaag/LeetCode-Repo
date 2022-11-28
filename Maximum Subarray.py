@@ -8,7 +8,7 @@ t=int(input())
 def main():
   for i in range(t):
     nums=list(map(int,input().split()))
-    ans=0
+    ans=nums[0]
     curr=0
     for i in nums:
       if curr < 0:
