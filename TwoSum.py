@@ -12,16 +12,14 @@ def helper():
 
 
 def main():
-  for i in range(0,t):
+  for j in range(0,t):
     nums= list(map(int,input().split()))
     target=nums[len(nums)-1]
-    li=[]
-    for i in range(0,len(nums)-1):
-      for j in range(i+1,len(nums)):
-        if nums[i]+ nums[j] == target:
-          li=[i,j]
-          print(i,j)
-        else:
-          continue
-    print(li)
+    d={}
+    for i,n in enumerate(nums):
+      rem=target-n
+      if n in d: 
+        print(d[n],i)
+      d[rem]= i 
+      
 main()
